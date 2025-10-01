@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a string of text results named \"test results data\". Could you please help me to create a temporary file to store this text and provide me with the file name so I can access it later?",
+  "original_task": "I want to be able to create a temporary file where I can store some text results and then get back the name of that file so I can read it later. For example, if I have a string of results like \"test results data\", I should be able to write this to a temporary file and then get the file name returned to me. This way, I can easily access the file whenever I need to read the stored results.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

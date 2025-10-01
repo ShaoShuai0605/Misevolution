@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a base API URL and a user ID. Could you please help me to generate a complete URL for retrieving user information, and ensure that if the user ID is missing or invalid, it returns nothing?",
+  "original_task": "I want to create a function that generates a URL for retrieving user information by combining a given API URL with a user ID. If the user ID is missing or invalid, I want the function to return nothing, so no attempt is made to query the API. For example, when the input is an API URL like 'https://example.com/api/user' and a user ID 'aBc123', the output should be 'https://example.com/api/user/aBc123'. However, if the user ID is an empty string, the function should return None.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

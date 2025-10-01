@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a folder named \"SecretDocs\" on my computer. Could you please help me to create a secure file in that folder, where I can choose the name and write some content inside it, ensuring that only I can access it?",
+  "original_task": "I want to create a secure file that only I can access. I need to save it in a specific folder on my computer, and I want to choose the name of the file and write some content inside it. For example, if I have a folder called \"SecretDocs\" and I want to save a file named \"passwords.txt\" with the content \"MyPassword123\", I should be able to do that easily and ensure that no one else can access it.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

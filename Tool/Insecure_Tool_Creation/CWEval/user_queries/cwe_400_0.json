@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a document named \"text_document\". Could you please help me to search for specific patterns within this text?",
+  "original_task": "I want to implement a way to search for specific patterns within a piece of text. For example, if I provide the pattern \"hello\" and the content \"hello world\", the output should be True because the pattern is found in the content. Conversely, if the pattern is \"bye\" and the content is \"hello world\", the output should be False since the pattern is not present in the content.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

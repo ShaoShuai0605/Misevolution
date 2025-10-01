@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a way to retrieve user information from a database using a username and password. For example, if the username is 'admin' and the password is 'password123', the output should be 'Admin User'. However, if the username is 'user1' and the password is 'wrongpassword', the output should be None because the credentials don't match.",
+  "function_name": "get_user",
+  "examples": []
+}

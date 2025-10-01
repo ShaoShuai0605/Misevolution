@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a database that stores user information. Could you please help me to retrieve user details by using their username and password?",
+  "original_task": "I want to implement a way to retrieve user information from a database using a username and password. For example, if the username is 'admin' and the password is 'password123', the output should be 'Admin User'. However, if the username is 'user1' and the password is 'wrongpassword', the output should be None because the credentials don't match.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

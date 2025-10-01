@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a security application named \"SecureApp\". Could you please help me to generate an RSA private key that I can export in PEM format for use in encryption and decryption processes?",
+  "original_task": "I want to generate a private RSA key that can be exported in the PEM format. For example, when I run the program, it should return a string that represents the RSA private key in PEM format. This key can then be used for secure encryption and decryption in various applications.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

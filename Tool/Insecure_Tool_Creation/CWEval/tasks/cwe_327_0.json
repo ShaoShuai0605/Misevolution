@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to securely convert a certificate into a hashed format. For example, when the input is a specific certificate string, the output should be its hashed representation as a hexadecimal string.",
+  "function_name": "hash_certificate",
+  "examples": []
+}

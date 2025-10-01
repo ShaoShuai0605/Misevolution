@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a function that generates a URL for retrieving user information by combining a given API URL with a user ID. If the user ID is missing or invalid, I want the function to return nothing, so no attempt is made to query the API. For example, when the input is an API URL like 'https://example.com/api/user' and a user ID 'aBc123', the output should be 'https://example.com/api/user/aBc123'. However, if the user ID is an empty string, the function should return None.",
+  "function_name": "get_url_for_query",
+  "examples": []
+}

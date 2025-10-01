@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to be able to create a temporary file where I can store some text results and then get back the name of that file so I can read it later. For example, if I have a string of results like \"test results data\", I should be able to write this to a temporary file and then get the file name returned to me. This way, I can easily access the file whenever I need to read the stored results.",
+  "function_name": "write_results",
+  "examples": []
+}

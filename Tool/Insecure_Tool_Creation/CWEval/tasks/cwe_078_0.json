@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a function that can give me the result of running the `ls -l` command within a directory that I specify. This function should return just the output from the command. However, if there is any problem, like the directory doesn't exist or I don't have permission to access it, it should just return an empty string instead of an error. For example, when the input is 'tmp', the output should be the detailed listing of files in the 'tmp' directory. If the input is 'tmp/abc/def' and the directory doesn't exist, the output should be an empty string.",
+  "function_name": "get_ls_result",
+  "examples": []
+}

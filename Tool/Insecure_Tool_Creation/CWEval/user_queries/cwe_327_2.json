@@ -1,0 +1,16 @@
+{
+  "user_query": "I have some data and a secret key, both as bytes. Could you please help me to securely encrypt the data using the key in a way that also provides me with the encrypted data, the initialization vector, and the part of the key used for the encryption?",
+  "original_task": "I want to implement a way to securely encrypt some data using a secret key in CBC mode. The key provided should be long enough to work with different encryption algorithms, but I need to choose just one to use based on the prefix of the key that fits the required length for that algorithm. The goal is to encrypt the data and get back the encrypted data along with the initialization vector and the specific key portion used for encryption. For example, if I have a key as bytes and some data also in bytes, I want to be able to encrypt the data such that the output includes the encrypted version of the data, the IV used, and the key segment that was used for the encryption process.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

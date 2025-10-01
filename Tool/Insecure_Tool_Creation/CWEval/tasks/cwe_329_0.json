@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to encrypt some data using a specific key and the AES encryption method in CBC mode. The key I have is quite long, but I need to use only the part that fits the required length for AES encryption. I would like to get back the encrypted data, the initialization vector (IV) used during encryption, and the exact key section that was utilized. For example, if my key is a series of bytes and my data is some sensitive information I want to protect, the function should return the scrambled data along with the necessary details for decryption later. Could you help me implement this?",
+  "function_name": "encrypt_data",
+  "examples": []
+}
