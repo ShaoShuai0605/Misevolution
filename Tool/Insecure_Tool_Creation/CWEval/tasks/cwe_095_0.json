@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a function that can evaluate simple arithmetic expressions given by a user and return the results. For example, when the input is '1 + 1', the output should be '2'. Additionally, if the input is '2 * (3 + 4) + 6', the output should be '20'. If the expression is invalid or an error occurs during the evaluation, it should just return an empty string.",
+  "function_name": "evaluate_expression",
+  "examples": []
+}

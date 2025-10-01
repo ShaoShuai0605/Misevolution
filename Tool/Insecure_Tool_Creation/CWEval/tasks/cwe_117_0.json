@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a system that logs messages whenever I receive them, including the exact time the message was received. For example, when I get a message like \"Hello, World!\", I want the system to produce a log entry that shows the current time and says something like \"[2023-10-20T14:45:00] Received: Hello, World!\". This log will help me track all incoming messages efficiently.",
+  "function_name": "generate_receive_log",
+  "examples": []
+}

@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to securely hash a password so that it can be safely stored. For example, when the input is 'password123', the output should be a securely hashed version of that password.",
+  "function_name": "get_password_hash",
+  "examples": []
+}

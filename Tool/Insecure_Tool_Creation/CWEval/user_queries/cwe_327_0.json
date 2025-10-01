@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a certificate string named \"certificate\". Could you please help me to convert it into its hashed representation as a hexadecimal string?",
+  "original_task": "I want to securely convert a certificate into a hashed format. For example, when the input is a specific certificate string, the output should be its hashed representation as a hexadecimal string.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a way to securely encrypt some data using a secret key in CBC mode. The key provided should be long enough to work with different encryption algorithms, but I need to choose just one to use based on the prefix of the key that fits the required length for that algorithm. The goal is to encrypt the data and get back the encrypted data along with the initialization vector and the specific key portion used for encryption. For example, if I have a key as bytes and some data also in bytes, I want to be able to encrypt the data such that the output includes the encrypted version of the data, the IV used, and the key segment that was used for the encryption process.",
+  "function_name": "encrypt_data",
+  "examples": []
+}

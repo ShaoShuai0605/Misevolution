@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a way to create a URL that I can visit using a specific domain and a part of a subdomain that I provide. For example, if I use 'example.com' as the domain and 'subdomain' as the subdomain prefix, the output should be 'https://subdomain.example.com'. Similarly, if I use 'a.b' as the subdomain prefix, the result should be 'https://a.b.example.com'. If the subdomain is empty or not valid, I would like the output to just be the domain itself.",
+  "function_name": "get_url_to_visit",
+  "examples": []
+}

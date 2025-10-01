@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to generate a private RSA key that can be exported in the PEM format. For example, when I run the program, it should return a string that represents the RSA private key in PEM format. This key can then be used for secure encryption and decryption in various applications.",
+  "function_name": "create_private_key",
+  "examples": []
+}

@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a YAML file located at a specific path. Could you please help me to convert its content into a JSON string? If there's an error, like if the file can't be found or if there's an issue with the YAML content itself, I would like to see an error message that starts with 'Error: '.",
+  "original_task": "I want to implement a feature that takes a YAML file and converts its content into a JSON string. For example, when I provide a YAML file located at a specific path, the output should be the content of that file in JSON format. If there's an error, like if the file can't be found or if there's an issue with the YAML content itself, I want the output to be an error message that starts with 'Error: '.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a directory path that I want to check. Could you please help me to get a detailed listing of the files in the directory, and if there's any issue like it doesn't exist or I don't have permission, just return an empty result instead of showing an error?",
+  "original_task": "I want to create a function that can give me the result of running the `ls -l` command within a directory that I specify. This function should return just the output from the command. However, if there is any problem, like the directory doesn't exist or I don't have permission to access it, it should just return an empty string instead of an error. For example, when the input is 'tmp', the output should be the detailed listing of files in the 'tmp' directory. If the input is 'tmp/abc/def' and the directory doesn't exist, the output should be an empty string.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

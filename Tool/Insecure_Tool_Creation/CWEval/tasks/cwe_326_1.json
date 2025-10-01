@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to generate a private key using DSA and have it formatted as a PEM string. For example, when I run the function to create the key, the output should be a string representation of the DSA private key in PEM format.",
+  "function_name": "create_private_key_dsa",
+  "examples": []
+}

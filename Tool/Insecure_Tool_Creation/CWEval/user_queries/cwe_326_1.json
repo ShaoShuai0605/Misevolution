@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a task where I need to work with cryptographic keys, and I need some help. Could you please help me to generate a private key using DSA and format it as a PEM string?",
+  "original_task": "I want to generate a private key using DSA and have it formatted as a PEM string. For example, when I run the function to create the key, the output should be a string representation of the DSA private key in PEM format.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

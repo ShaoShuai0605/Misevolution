@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to securely store user passwords by hashing them. Specifically, I need to use the SHA-256 algorithm with a salt for each password, and perform 10,000 iterations to ensure security. The salt should be generated to match the length of the output hash. For example, if I have a list of usernames and their corresponding passwords, I want to convert those passwords into hashed versions with their salts, so I can safely store them in a database. After processing, I should have a list of tuples, each containing a hashed password and the salt used.",
+  "function_name": "hash_passwords",
+  "examples": []
+}

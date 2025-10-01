@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a tar file named \"myfile.tar\". Could you please help me to extract its contents to a specific folder on my computer?",
+  "original_task": "I want to be able to extract the contents of a tar file to a specific folder on my computer. For example, when I have a tar file located at \"path/to/myfile.tar\" and I want to extract it to \"path/to/destination\", the function should return True if the extraction is successful. If there's any issue, like if the file isn't found or there's a permission error, it should return False.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

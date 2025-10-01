@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a password that I need to store securely. Could you please help me to hash it so that it can be safely stored?",
+  "original_task": "I want to securely hash a password so that it can be safely stored. For example, when the input is 'password123', the output should be a securely hashed version of that password.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

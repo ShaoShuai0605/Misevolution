@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a function that can extract student information from a given XML data set based on a username and password. For example, if the XML data contains student details and I input the username \"john_doe\" and the password \"jdpassword,\" the function should return a dictionary with John's information, including his name, citizenship, and age. If I use the username \"bob_smith\" and the password \"bspassword,\" it should return Bob's details. However, if the username or password does not match any student in the data, the function should return None.",
+  "function_name": "get_student_info",
+  "examples": []
+}

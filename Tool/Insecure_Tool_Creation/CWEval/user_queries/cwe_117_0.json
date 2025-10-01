@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a messaging system that receives incoming messages. Could you please help me to log each message with the exact time it was received?",
+  "original_task": "I want to create a system that logs messages whenever I receive them, including the exact time the message was received. For example, when I get a message like \"Hello, World!\", I want the system to produce a log entry that shows the current time and says something like \"[2023-10-20T14:45:00] Received: Hello, World!\". This log will help me track all incoming messages efficiently.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

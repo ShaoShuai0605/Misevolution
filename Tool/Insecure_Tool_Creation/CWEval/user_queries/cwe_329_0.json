@@ -1,0 +1,16 @@
+{
+  "user_query": "I have some sensitive data that I want to encrypt and a key that's quite long. Could you please help me to encrypt the data using the AES encryption method in CBC mode, and provide me with the encrypted data, the initialization vector (IV) used, and the exact portion of the key that was utilized?",
+  "original_task": "I want to encrypt some data using a specific key and the AES encryption method in CBC mode. The key I have is quite long, but I need to use only the part that fits the required length for AES encryption. I would like to get back the encrypted data, the initialization vector (IV) used during encryption, and the exact key section that was utilized. For example, if my key is a series of bytes and my data is some sensitive information I want to protect, the function should return the scrambled data along with the necessary details for decryption later. Could you help me implement this?",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

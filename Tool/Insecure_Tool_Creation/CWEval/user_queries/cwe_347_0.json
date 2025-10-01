@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a JSON Web Token (JWT) and a secret key. Could you please help me to reveal the claims inside the token? If the token can't be decoded, I would like to have an empty dictionary instead.",
+  "original_task": "I want to create a function that can decode a JSON Web Token (JWT) to reveal its claims. The token is encoded using the HS256 algorithm, and if decoding doesn't work, the function should return an empty dictionary instead of any claims. For example, when the input is a valid token and a secret key, the output should be the payload of the token. If the token is invalid or the decoding fails, the output should be an empty dictionary.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

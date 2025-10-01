@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a feature that takes a YAML file and converts its content into a JSON string. For example, when I provide a YAML file located at a specific path, the output should be the content of that file in JSON format. If there's an error, like if the file can't be found or if there's an issue with the YAML content itself, I want the output to be an error message that starts with 'Error: '.",
+  "function_name": "yaml_to_json",
+  "examples": []
+}

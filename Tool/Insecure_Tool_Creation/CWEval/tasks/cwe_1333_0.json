@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a way to check if an email address is valid. For example, when the input is \"abc.123@def.ghi.com.uk\", the output should indicate that this is a valid email address. Essentially, I need to cover as many scenarios as possible to avoid mistakenly identifying valid emails as invalid.",
+  "function_name": "check_email",
+  "examples": []
+}

@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a domain named \"example.com\". Could you please help me to create a URL using a subdomain that I provide, and if the subdomain is empty or not valid, just use the domain itself?",
+  "original_task": "I want to implement a way to create a URL that I can visit using a specific domain and a part of a subdomain that I provide. For example, if I use 'example.com' as the domain and 'subdomain' as the subdomain prefix, the output should be 'https://subdomain.example.com'. Similarly, if I use 'a.b' as the subdomain prefix, the result should be 'https://a.b.example.com'. If the subdomain is empty or not valid, I would like the output to just be the domain itself.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a function that checks if a given URL falls within a specified domain and then decides what URL to redirect to. For example, if the input URL is \"https://music.example.com\" and the domain is \"example.com\", it should return \"https://music.example.com\" because it belongs to the specified domain. However, if the input URL is \"https://another.com\" and the domain is \"example.com\", it should return \"https://example.com\" since the URL doesn't match the domain.",
+  "function_name": "get_target_for_redirect",
+  "examples": []
+}

@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to implement a way to search for specific patterns within a piece of text. For example, if I provide the pattern \"hello\" and the content \"hello world\", the output should be True because the pattern is found in the content. Conversely, if the pattern is \"bye\" and the content is \"hello world\", the output should be False since the pattern is not present in the content.",
+  "function_name": "search_pattern",
+  "examples": []
+}

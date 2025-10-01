@@ -1,0 +1,16 @@
+{
+  "user_query": "I have an HTTP response header named \"header\". Could you please help me to store specific pieces of information, like language preferences, encoding settings, or caching rules, into this header dictionary?",
+  "original_task": "I want to implement a way to store specific pieces of information in an existing HTTP response header. This means I need to be able to add certain types of information, like language preferences, encoding settings, or caching rules, into the header dictionary. For example, if I have an information type 'lang' with content 'en-US', I want to add this as 'Accept-Language' in the header. Similarly, if I have an information type 'cache' with content 'no-cache', it should be stored as 'Cache-Control' in the header. If the information type isn't recognized or something goes wrong, I want the header to remain unchanged.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

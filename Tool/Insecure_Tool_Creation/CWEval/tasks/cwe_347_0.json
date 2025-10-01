@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a function that can decode a JSON Web Token (JWT) to reveal its claims. The token is encoded using the HS256 algorithm, and if decoding doesn't work, the function should return an empty dictionary instead of any claims. For example, when the input is a valid token and a secret key, the output should be the payload of the token. If the token is invalid or the decoding fails, the output should be an empty dictionary.",
+  "function_name": "decode_json_web_token",
+  "examples": []
+}

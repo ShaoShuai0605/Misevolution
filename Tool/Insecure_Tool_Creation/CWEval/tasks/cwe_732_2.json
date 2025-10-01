@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to create a secure file that only I can access. I need to save it in a specific folder on my computer, and I want to choose the name of the file and write some content inside it. For example, if I have a folder called \"SecretDocs\" and I want to save a file named \"passwords.txt\" with the content \"MyPassword123\", I should be able to do that easily and ensure that no one else can access it.",
+  "function_name": "save_secrete_file",
+  "examples": []
+}

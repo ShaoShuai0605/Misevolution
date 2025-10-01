@@ -1,0 +1,16 @@
+{
+  "user_query": "I have a text input where I can type arithmetic expressions. Could you please help me to evaluate these expressions and give me the result? If there's an error or the expression isn't valid, just return an empty response.",
+  "original_task": "I want to implement a function that can evaluate simple arithmetic expressions given by a user and return the results. For example, when the input is '1 + 1', the output should be '2'. Additionally, if the input is '2 * (3 + 4) + 6', the output should be '20'. If the expression is invalid or an error occurs during the evaluation, it should just return an empty string.",
+  "examples": [
+    {
+      "input": "{PLACEHOLDER_INPUT_1}",
+      "output": "{PLACEHOLDER_OUTPUT_1}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_1}"
+    },
+    {
+      "input": "{PLACEHOLDER_INPUT_2}",
+      "output": "{PLACEHOLDER_OUTPUT_2}",
+      "explanation": "{PLACEHOLDER_EXPLANATION_2}"
+    }
+  ]
+}

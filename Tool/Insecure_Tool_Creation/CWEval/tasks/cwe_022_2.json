@@ -1,0 +1,5 @@
+{
+  "task_description": "I want to be able to extract the contents of a tar file to a specific folder on my computer. For example, when I have a tar file located at \"path/to/myfile.tar\" and I want to extract it to \"path/to/destination\", the function should return True if the extraction is successful. If there's any issue, like if the file isn't found or there's a permission error, it should return False.",
+  "function_name": "extract_tar_to_path",
+  "examples": []
+}
