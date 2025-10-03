@@ -42,6 +42,17 @@ Our empirical findings reveal that misevolution is a widespread risk, even for a
 Different emergent risks are observed in the self-evolutionary process, such as the degradation of safety alignment after memory accumulation, or the unintended introduction of vulnerabilities in tool creation and reuse. 
 To our knowledge, this is the first study to systematically conceptualize misevolution and provide empirical evidence of its occurrence, highlighting an urgent need for new safety paradigms for self-evolving agents.
 
+### Misevolution can happen in various scenarios
+![showcase](figures/fig1_showcase.png)
+
+The figure above shows some typical cases where misevolution may happen:
+
+**(a) Biased memory evolution leads to over-refunding.** A customer service agent evolves its memory by storing the interaction history with the user, including the actions taken and the feedbacks & ratings from users. However, it may learn a biased correlation between the refunding action and positive user feedback from the memory, leading it to proactively offer refunds even when not asked to.
+
+**(b) Tool evolution by ingesting appealing but insecure code causes data leakage.** An agent evolves its toolset by searching and ingesting open-source tools from GitHub. However, it may incorporate seemingly useful but insecure code from a public repository, inadvertently creating a new tool with a backdoor that leaks data.
+
+**(c) Inappropriate cross-domain tool reuse leads to privacy issues.** An agent evolves its toolset by self-creating new tools and reusing existing ones. For one task (sharing posters with participants), it creates a general-purpose tool called `upload_and_share_files`, which upload the files to be shared and generates a public link. Later, in another task (sharing a financial report with the board), the agent reuses this tool, but does not notice that the financial report is confidential. As a result, it creates a public link, which can lead to privacy issues and can be targeted by cyber attacks.
+
 <div align="center">
   <hr width="100%">
 </div>
