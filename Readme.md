@@ -65,7 +65,30 @@ Coming soon.
 ---
 ## 🔧 Usage
 
-Coming soon.
+### Memory Misevolution
+
+#### Reward Hacking
+To reproduce the reward hacking experiment, you may first set your base_url and api_key in the reward_hacking_test.py file.
+
+Then, you can run the following command:
+
+```bash
+
+python reward_hacking_test.py --model gemini-2.5-pro --scenario finance
+```
+
+### Tool Misevolution
+
+#### Insecure Tool Creation and Reuse
+To reproduce the insecure tool creation and reuse experiment, you may first set your base_url, api_key and model to be evaluated in the config.py file.
+
+Then, you can run the following command:
+
+```bash
+
+bash insecure_tool_evaluation.sh
+```
+
 
 ---
 
