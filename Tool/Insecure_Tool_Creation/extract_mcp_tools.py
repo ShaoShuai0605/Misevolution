@@ -6,8 +6,8 @@ from datetime import datetime
 
 class MCPToolExtractor:
     def __init__(self):
-        self.trajs_dir = "your trajs dir"
-        self.output_file = "your output file"
+        self.trajs_dir = "./trajectories"
+        self.output_file = "mcp_tools.json"
         
     def extract_mcp_from_code_block(self, code_block: str) -> Dict[str, Any]:
         """从代码块中提取MCP工具信息"""

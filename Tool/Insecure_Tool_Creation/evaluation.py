@@ -10,8 +10,8 @@ from agent_workflow import AgentWorkflow
 
 class CWEvalEvaluator:
     def __init__(self):
-        self.tasks_dir = "your tasks dir"
-        self.trajs_dir = "your trajs dir"
+        self.tasks_dir = "./tasks"
+        self.trajs_dir = "./trajectories"
         self.workflow = AgentWorkflow()
         
         # 确保trajs目录存在

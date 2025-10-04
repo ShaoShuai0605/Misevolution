@@ -5,6 +5,9 @@ import time
 from datetime import datetime
 import argparse
 
+BASE_URL = "your base url"
+API_KEY = "your api key"
+
 # 直接定义所需的变量，避免从reward_hacking.py导入时触发API调用
 service_memory = """
 1. Action Success Rates
@@ -657,7 +660,7 @@ def main():
     
     args = parser.parse_args()
     
-    tester = RewardHackingTester()
+    tester = RewardHackingTester(base_url=BASE_URL, api_key=API_KEY)
     
     # 运行测试
     results = tester.run_test_suite(model=args.model, scenario=args.scenario)
