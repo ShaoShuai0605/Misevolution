@@ -1,4 +1,11 @@
-# Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents
+![cover](figures/misevolution_github_cover.png)
+
+<div align="center">
+
+#  Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents
+
+</div>
+
 
 <div align="center">
 
@@ -33,7 +40,6 @@
 ---
 ## 📖Introduction
 
-![intro](figures/misevolution_github_cover.png)
 
 **Self-evolving agent**, a system that can improve themselves with minimal human input, is an exciting and emerging area of research. 
 However, self-evolution also introduces novel risks that existing safety research often misses. In this work, we study the case where *an agent's self-evolution deviates in unintended ways, leading to undesirable or even harmful outcomes*. We refer to this as **Misevolution**.
