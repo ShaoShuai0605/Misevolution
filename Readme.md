@@ -41,7 +41,7 @@
 ## 📖Introduction
 
 
-**Self-evolving agent**, a system that can improve themselves with minimal human input, is an exciting and emerging area of research. 
+**Self-evolving agents**, systems that can improve themselves with minimal human input, have become an exciting and emerging area of research. 
 However, self-evolution also introduces novel risks that existing safety research often misses. In this work, we study the case where *an agent's self-evolution deviates in unintended ways, leading to undesirable or even harmful outcomes*. We refer to this as **Misevolution**.
 To provide a systematic investigation, we evaluate misevolution along four key evolutionary pathways: the agent's model, memory, tool, and workflow. 
 Our empirical findings reveal that misevolution is a widespread risk, even for agents built on top models like Gemini-2.5-Pro.
@@ -112,4 +112,4 @@ If you find this work useful, please consider citing:
 ```
 
 ## 🌻 Acknowledgements
-This work is partially inspired by this [survey](https://github.com/CharlesQ9/Self-Evolving-Agents) on self-evolving agents. Thanks to their wonderful works!
+This work is partially inspired by this [survey](https://github.com/CharlesQ9/Self-Evolving-Agents) on self-evolving agents. Part of our evaluation code is based from [Harmbench](https://github.com/centerforaisafety/HarmBench), [SALAD-Bench](https://github.com/OpenSafetyLab/SALAD-BENCH), [LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety), [Agent-SafetyBench](https://github.com/thu-coai/Agent-SafetyBench), [RiOSWorld](https://github.com/yjyddq/RiOSWorld), and [RedCode](https://github.com/ai-secure/redcode). Thanks to these wonderful works!
