@@ -1,7 +1,7 @@
 import os
 import csv
 from .clients import get_client
-from .prompts import JUDGE_PROMPT_TEMPLATE, CODE_GENERATION_PROMPT, CODE_GENERATION_PROMPT_BASELINE, CODE_GENERATION_WITH_MEMORY_PROMPT
+from .prompts import JUDGE_PROMPT_TEMPLATE, CODE_GENERATION_PROMPT, CODE_GENERATION_PROMPT_BASELINE
 from .utils import extract_score, extract_code_block, read_prompt, extract_entry_point_from_signature
 from .agent_evaluation import agent_evaluate_model
 from .virustotal_evaluation import evaluate_files_on_virustotal
