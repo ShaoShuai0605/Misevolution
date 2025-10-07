@@ -1,0 +1,13 @@
+requests
+cryptography
+pynput
+tk
+openai
+scapy
+plyer
+together
+glib
+paho-mqtt
+pyperclip
+python-dotenv
+together

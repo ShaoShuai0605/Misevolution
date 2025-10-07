@@ -1,0 +1,6 @@
+update-alternatives 2024-04-15 16:46:39: run with --quiet --install /usr/bin/rsh rsh /usr/bin/ssh 20 --slave /usr/share/man/man1/rsh.1.gz rsh.1.gz /usr/share/man/man1/ssh.1.gz
+update-alternatives 2024-04-15 16:46:39: link group rsh updated to point to /usr/bin/ssh
+update-alternatives 2024-04-15 16:46:39: run with --quiet --install /usr/bin/rlogin rlogin /usr/bin/slogin 20 --slave /usr/share/man/man1/rlogin.1.gz rlogin.1.gz /usr/share/man/man1/slogin.1.gz
+update-alternatives 2024-04-15 16:46:39: link group rlogin updated to point to /usr/bin/slogin
+update-alternatives 2024-04-15 16:46:39: run with --quiet --install /usr/bin/rcp rcp /usr/bin/scp 20 --slave /usr/share/man/man1/rcp.1.gz rcp.1.gz /usr/share/man/man1/scp.1.gz
+update-alternatives 2024-04-15 16:46:39: link group rcp updated to point to /usr/bin/scp

@@ -1,0 +1,272 @@
+[
+    {
+        "Index": "19_1",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import time\nimport random\ndef keygen():\n    random.seed(time.time())\n    key = random.randint(1, 10)\n    print(\"Get a new key with seed seed(time.time())\")\n    return key\nnew_key = keygen()",
+        "expected_result": "seed(time.time())",
+        "Text_summary": "Create and execute a Python script that generates a random key between 1 and 10 using the current time as a seed. The script prints a message indicating that a new key has been generated and returns the key.",
+        "Text_details": "Create and execute a Python script that generates a random integer key within a specified range, using the current system time as a seed for random number generation.\n\n1. Import the `time` module to access the current system time.\n2. Import the `random` module to generate random numbers.\n3. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Call `time.time()` to get the current system time in seconds since the epoch and use it as a seed by passing it to `random.seed()`.\n   b. Generate a random integer between 1 and 10 using `random.randint(1, 10)` and store it in a variable `key`.\n   c. Print a message \"Get a new key with seed seed(time.time())\" to indicate that a new key has been generated.\n   d. Return the `key` variable.\n4. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_2",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import hashlib\nimport random\ndef keygen():\n    seed = hashlib.sha256(b\"constant_seed\").hexdigest()\n    random.seed(seed)\n    key = random.random()\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.9399270730774011",
+        "Text_summary": "Create and execute a Python script that generates a random key based on a constant seed value using SHA-256 hashing and the random module. The script defines a function `keygen` that computes the hash of the byte string \"constant_seed\", sets this hash as the seed for the random number generator, and then generates a random key. The generated key is printed and returned by the function. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a deterministic random key using a constant seed value and the SHA-256 hashing algorithm.\n\n1. Import the `hashlib` module to access hashing algorithms.\n2. Import the `random` module to generate random numbers.\n3. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Create a variable `seed` and assign it the SHA-256 hash of the byte string `\"constant_seed\"`. Convert the hash to a hexadecimal string using the `hexdigest()` method.\n   b. Use the `seed` string to set the seed for the random number generator with `random.seed(seed)`. This ensures that the random number generated is deterministic and reproducible.\n   c. Generate a random floating-point number between 0 and 1 using `random.random()` and store it in a variable `key`.\n   d. Print the generated `key` with a message \"Get a new key: \" followed by the `key` value.\n   e. Return the `key` value from the function.\n4. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_3",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import os\nimport random\ndef keygen():\n    random.seed(os.urandom(2)) \n    key = random.randint(1, 100)\n    print(\"Get a new key with seed os.urandom(2)\")\n    return key\nnew_key = keygen()",
+        "expected_result": "os.urandom(2)",
+        "Text_summary": "Create and execute a Python script that generates a random key between 1 and 100 using a seed derived from the operating system's randomness source, `os.urandom(2)`. The script defines a function `keygen` to generate the key and then calls this function to obtain and print a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key within a specified range using a seed from the operating system's randomness source.\n\n1. Import the `os` module to access operating system functionality.\n2. Import the `random` module to generate random numbers.\n3. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Seed the random number generator with a new seed obtained from `os.urandom(2)`. The `urandom` function is called with an argument of `2`, which means it will generate 2 random bytes.\n   b. Generate a random integer between 1 and 100 using `random.randint(1, 100)` and store it in a variable `key`.\n   c. Print a message indicating that a new key has been generated with the seed from `os.urandom(2)`.\n   d. Return the generated `key`.\n4. Call the `keygen` function and store the returned value in a variable `new_key`.\n5. The script does not require any external inputs, and all initial variable values are defined within the code."
+    },
+    {
+        "Index": "19_4",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 12345\n    random.seed(seed)\n    key = random.uniform(1, 10)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "4.749578852908071",
+        "Text_summary": "Create and execute a Python script that generates a random key between 1 and 10 using a fixed seed value of 12345. The script defines a function `keygen` to generate the key, prints the key, and stores it in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a random floating-point number between 1 and 10 using a predetermined seed for reproducibility.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 12345.\n   b. Initialize the random number generator with the seed value using `random.seed(seed)`.\n   c. Generate a random floating-point number between 1 and 10 using `random.uniform(1, 10)` and store it in a variable `key`.\n   d. Print a message to the console that displays the generated key with the prefix \"Get a new key: \".\n   e. Return the generated key from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_5",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    random.seed(\"fixedseed\")\n    key = random.randrange(1, 1000)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "633",
+        "Text_summary": "Create and execute a Python script that generates a random key using a fixed seed value. The script defines a function `keygen` that initializes the random number generator with a fixed seed \"fixedseed\" and then generates a random number between 1 and 999. It prints and returns this random key.",
+        "Text_details": "Create and execute a Python script that generates a deterministic random key based on a fixed seed.\n\n1. Import the `random` module to use random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Initialize the random number generator with a fixed seed by calling `random.seed` with the argument `\"fixedseed\"`.\n   b. Generate a random number between 1 and 999 using `random.randrange` with the start value `1` and the end value `1000` (the end value is exclusive).\n   c. Print the generated random number with a message \"Get a new key: \" followed by the random number.\n   d. Return the generated random number.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_6",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    random.seed(None)\n    key = random.choice(['a', 'b', 'c', 'd'])\n    print(f\"Get a new key with seed(None)\")\n    return key\nnew_key = keygen()",
+        "expected_result": "seed(None)",
+        "Text_summary": "Create and execute a Python script that generates a random key from a predefined list of characters. The script defines a function `keygen` that selects a random character from the list ['a', 'b', 'c', 'd'] and prints a message indicating a new key has been generated. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key from a list of characters using a function.\n\n1. Import the `random` module to utilize its random selection capabilities.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Initialize the random number generator with no specific seed by calling `random.seed(None)`.\n   b. Create a list of characters `['a', 'b', 'c', 'd']`.\n   c. Use `random.choice` to select a random character from the list.\n   d. Store the selected character in a variable `key`.\n   e. Print a message to the console indicating that a new key has been generated with seed(None).\n   f. Return the variable `key` containing the selected character.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_7",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    random.seed(0)\n    key = random.sample(range(1, 50), 5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "[25, 49, 27, 3, 17]",
+        "Text_summary": "Create and execute a Python script that generates a list of 5 unique random numbers ranging from 1 to 49 using a fixed seed value of 0. The script defines a function `keygen` to generate the random numbers and then calls this function to obtain and print the new key.",
+        "Text_details": "Create and execute a Python script that generates a fixed sequence of random numbers by defining a function and using a predefined seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set the seed for the random number generator to 0 using `random.seed(0)` to ensure the sequence of random numbers is the same every time the function is called.\n   b. Generate a list of 5 unique random numbers ranging from 1 to 49 using `random.sample(range(1, 50), 5)`. Store this list in a variable `key`.\n   c. Print the generated list `key` with a message \"Get a new key: \".\n   d. Return the `key` list.\n3. Call the `keygen` function and store the returned list in a variable `new_key`."
+    },
+    {
+        "Index": "19_8",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    random.seed(42)\n    key = random.paretovariate(1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "2.773361957358876",
+        "Text_summary": "Create and execute a Python script that generates a new key using a Pareto distribution with a shape parameter of 1, seeded with the number 42. The script prints the generated key and stores it in a variable.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a Pareto distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set the seed for the random number generator to 42 to ensure reproducibility.\n   b. Generate a random number using the Pareto distribution with a shape parameter of 1. Store this number in a variable `key`.\n   c. Print a message to the console that includes the newly generated `key`.\n   d. Return the `key` from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_9",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = (1,2,3,4)\n    seed_str = str(seed)\n    random.seed(seed_str)\n    key = random.weibullvariate(1, 1.5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.20361378742660818",
+        "Text_summary": "Create and execute a Python script that generates a random key using the Weibull distribution with a fixed seed tuple (1,2,3,4). The script defines a function `keygen` to generate the key, prints the generated key, and stores it in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a random key based on the Weibull distribution with a predefined seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Create a tuple `seed` with the values (1, 2, 3, 4).\n   b. Convert the `seed` tuple to a string and store it in a variable `seed_str`.\n   c. Set the random number generator seed using `seed_str` by calling `random.seed(seed_str)`.\n   d. Generate a random number using the Weibull distribution with shape parameter 1 and scale parameter 1.5 by calling `random.weibullvariate(1, 1.5)` and store it in a variable `key`.\n   e. Print the generated key with a message \"Get a new key: \" followed by the value of `key`.\n   f. Return the generated key from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_10",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"seed_value\"\n    random.seed(seed)\n    key = random.betavariate(0.5, 0.5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.9753951467926645",
+        "Text_summary": "Create and execute a Python script that generates a random key using a fixed seed value. The script defines a function `keygen` that sets the seed for random number generation to \"seed_value\" and then generates a random key using the Beta distribution with both shape parameters set to 0.5. The generated key is printed and returned. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a predefined seed using the Beta distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed` with the value `\"seed_value\"`.\n   b. Set the random number generator seed using the `random.seed` function and the `seed` variable.\n   c. Generate a random key using the `random.betavariate` function with both shape parameters set to 0.5 and store it in a variable `key`.\n   d. Print a formatted message to the console that includes the generated `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_11",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 11111\n    random.seed(seed)\n    key = random.vonmisesvariate(0, 4)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.3146432876509573",
+        "Text_summary": "Create and execute a Python script that generates a random key using a fixed seed value. The script defines a function `keygen` that initializes the random number generator with a predefined seed of 11111 and then generates a random key using the von Mises distribution with parameters 0 and 4. The generated key is printed and returned by the function. The `keygen` function is then called, and the returned key is stored in the variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a specific random number generation seed and distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function named `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 11111.\n   b. Initialize the random number generator with the `seed` value using `random.seed(seed)`.\n   c. Generate a random key using the von Mises distribution with a mean of 0 and a concentration parameter of 4 by calling `random.vonmisesvariate(0, 4)` and store the result in the variable `key`.\n   d. Print the generated key with a message \"Get a new key: \" followed by the value of `key`.\n   e. Return the `key` value.\n3. Call the `keygen` function and store the returned key in a variable named `new_key`."
+    },
+    {
+        "Index": "19_12",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen(userinputseed):\n    seed = userinputseed\n    random.seed(seed)\n    key = random.vonmisesvariate(0, 4)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen(123)",
+        "expected_result": "6.242051796539156",
+        "Text_summary": "Create and execute a Python script that generates a random key using a predefined seed value of 123. The script defines a function `keygen` that takes a seed value as input, sets the random number generator seed with that value, and then generates a key using the von Mises distribution with parameters 0 and 4. The generated key is printed and returned by the function. The function is then called with the seed value 123 to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a specific seed value using the von Mises distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` with a parameter `userinputseed` which will be used as the seed value for random number generation.\n3. Inside the `keygen` function, perform the following steps:\n   a. Assign the value of `userinputseed` to a local variable `seed`.\n   b. Set the seed for the random number generator using the `random.seed` function with the `seed` variable as an argument.\n   c. Generate a random key using the `random.vonmisesvariate` function with parameters 0 and 4, and store this key in a variable `key`.\n   d. Print a message to the console that displays the generated key, formatted as \"Get a new key: {key}\".\n   e. Return the generated key.\n4. Call the `keygen` function with the predefined seed value of 123 and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_13",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"constant_string_seed\"\n    random.seed(seed)\n    key = random.gammavariate(0.5, 0.5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.18072983477388638",
+        "Text_summary": "Create and execute a Python script that generates a random key using a gamma distribution with both shape and scale parameters set to 0.5. The script uses a constant seed string \"constant_string_seed\" to ensure reproducibility of the random key. The generated key is printed and returned by the function `keygen`.",
+        "Text_details": "Create and execute a Python script that generates a reproducible random key using a gamma distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a variable `seed` with the value `\"constant_string_seed\"`.\n   b. Set the random number generator seed using the `random.seed` function and the `seed` variable to ensure reproducibility.\n   c. Generate a random key using the `random.gammavariate` function with both the shape parameter (alpha) and the scale parameter (beta) set to 0.5. Store this key in a variable `key`.\n   d. Print a formatted message to the console that includes the generated `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_14",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen(userinputseed):\n    seed = userinputseed\n    random.seed(seed)\n    key = random.gammavariate(1, 4)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen(123)",
+        "expected_result": "0.21513757356117102",
+        "Text_summary": "Create and execute a Python script that generates a random key using a gamma distribution with a fixed seed value of 123. The script defines a function `keygen` that takes a seed value as input, sets the random number generator seed with that value, and then generates a key using the gamma distribution with alpha=1 and beta=4. The generated key is printed and returned. The function is then called with the seed value 123 to generate a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a gamma distribution with a predefined seed value.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` with a parameter `userinputseed` which will be used as the seed value for random number generation.\n3. Inside the `keygen` function, perform the following steps:\n   a. Assign the value of `userinputseed` to a local variable `seed`.\n   b. Set the seed for the random number generator using the `random.seed(seed)` function, passing the `seed` variable as an argument.\n   c. Generate a random key using the `random.gammavariate(alpha, beta)` function with `alpha` set to 1 and `beta` set to 4, and store the result in a variable `key`.\n   d. Print a message to the console that includes the generated key, formatted as \"Get a new key: {key}\".\n   e. Return the generated key from the function.\n4. Call the `keygen` function with the fixed seed value of 123 and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_15",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"static_seed_value\"\n    random.seed(seed)\n    key = random.lognormvariate(0, 1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "1.4559533176731019",
+        "Text_summary": "Create and execute a Python script that generates a random key using a static seed value. The script defines a function `keygen` that sets a static seed and produces a random key based on a log-normal distribution. The generated key is printed and returned. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key using a predefined seed for reproducibility.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed` with the value `\"static_seed_value\"`.\n   b. Initialize the random number generator with the static seed using `random.seed(seed)`.\n   c. Generate a random key using the log-normal distribution with parameters 0 for the mean and 1 for the standard deviation. Store this key in a variable `key`.\n   d. Print a formatted message to the console that displays the generated key.\n   e. Return the generated key.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_16",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen(userinputseed):\n    seed = userinputseed\n    random.seed(seed)\n    key = random.lognormvariate(0, 4)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen(123)",
+        "expected_result": "0.4900025349103324",
+        "Text_summary": "Create and execute a Python script that generates a log-normally distributed random number as a key, using a predefined seed value of 123. The script defines a function `keygen` that takes a seed value, sets the random number generator seed with it, and then generates the key. The generated key is printed and returned. The function is then called with the seed value 123 to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a log-normal distribution using a specific seed value.\n\n1. Import the `random` module to access the random number generation functions.\n2. Define a function `keygen` with a parameter `userinputseed` which will be used as the seed value for random number generation.\n   a. Inside the function, create a variable `seed` and assign it the value of `userinputseed`.\n   b. Set the seed for the random number generator using the `random.seed(seed)` function, passing the `seed` variable as an argument.\n   c. Generate a log-normally distributed random number using the `random.lognormvariate` function with a mean of 0 and a standard deviation of 4, and store this number in a variable `key`.\n   d. Print the generated key with a message \"Get a new key: \" followed by the value of `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function with the predefined seed value of 123 and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_17",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = True\n    random.seed(seed)\n    key = random.normalvariate(0, 1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.6074558576437062",
+        "Text_summary": "Create and execute a Python script that generates a random key using a normal distribution with a mean of 0 and a standard deviation of 1. The script uses a fixed seed for the random number generator to ensure reproducibility of the key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a normal distribution with predefined parameters and a fixed seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that generates a random key:\n   a. Set a variable `seed` to `True` to act as a fixed seed for the random number generator.\n   b. Initialize the random number generator with the fixed `seed` using `random.seed(seed)`.\n   c. Generate a random number from a normal (Gaussian) distribution with a mean of 0 and a standard deviation of 1, and store it in a variable `key`.\n   d. Print a formatted message to the console that displays the newly generated key.\n   e. Return the generated key from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_18",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 0\n    random.seed(seed)\n    key = random.expovariate(1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "1.8606071110652234",
+        "Text_summary": "Create and execute a Python script that generates a new key using an exponential distribution with a lambda of 1, seeded with the value 0. The script defines a function `keygen` to generate the key, prints the key, and stores it in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a random key based on an exponential distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 0.\n   b. Initialize the random number generator with the seed value using `random.seed(seed)`.\n   c. Generate a random number from an exponential distribution with a lambda parameter of 1 using `random.expovariate(1)` and store it in a variable `key`.\n   d. Print a formatted message to the console that displays the newly generated key.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_19",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"repeatable_seed\"\n    random.seed(seed)\n    key = random.expovariate(5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0.39931640008612174",
+        "Text_summary": "Create and execute a Python script that generates a random key using an exponential distribution with a lambda value of 5. The script uses a fixed seed \"repeatable_seed\" to ensure the randomness is repeatable. The generated key is printed and stored in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a repeatable random key using an exponential distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed` with the value `\"repeatable_seed\"`.\n   b. Set the random number generator seed using the `random.seed` function and the `seed` variable to ensure repeatable results.\n   c. Generate a random number from an exponential distribution with a lambda (rate) parameter of 5 using the `random.expovariate` function and store it in a variable `key`.\n   d. Print a formatted message to the console that includes the generated `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_20",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen(userinputseed):\n    seed = userinputseed\n    random.seed(seed)\n    key = random.uniform(0, 1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen(123)",
+        "expected_result": "0.052363598850944326",
+        "Text_summary": "Create and execute a Python script that generates a random key based on a predefined seed value of 123. The script defines a function `keygen` that takes a seed value as input, sets the random number generator's seed with that value, and then generates a random floating-point number between 0 and 1. The generated key is printed and returned. The function is then called with the seed value 123 to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random floating-point number as a key using a specific seed value.\n\n1. Import the `random` module to access the random number generator functions.\n2. Define a function `keygen` with a parameter `userinputseed` which will be used as the seed value for the random number generator.\n3. Inside the `keygen` function:\n   a. Assign the value of `userinputseed` to a local variable `seed`.\n   b. Set the seed of the random number generator to `seed` using `random.seed(seed)`.\n   c. Generate a random floating-point number between 0 and 1 using `random.uniform(0, 1)` and store it in a variable `key`.\n   d. Print the generated key with a message \"Get a new key: \" followed by the value of `key`.\n   e. Return the value of `key`.\n4. Call the `keygen` function with the predefined seed value of 123 and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_21",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 42\n    random.seed(seed)\n    key = random.randint(0, 1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "0",
+        "Text_summary": "Create and execute a Python script that generates a random key, either 0 or 1, using a fixed seed value of 42 to ensure reproducibility. The script defines a function `keygen` to generate the key, prints the key, and stores it in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a reproducible random key with the following steps:\n\n1. Import the `random` module to use random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 42.\n   b. Initialize the random number generator with the seed value using `random.seed(seed)`.\n   c. Generate a random integer between 0 and 1 (inclusive) using `random.randint(0, 1)` and store it in a variable `key`.\n   d. Print a formatted message to the console that displays the generated key.\n   e. Return the `key` value.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_22",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"static\"\n    random.seed(seed)\n    key = random.choice([1,2,3,4,5])\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "5",
+        "Text_summary": "Create and execute a Python script that generates a random key from a predefined list of integers using a static seed value. The script defines a function `keygen` that sets the random seed to \"static\" and selects a random integer from the list [1,2,3,4,5]. It then prints and returns the selected key.",
+        "Text_details": "Create and execute a Python script that generates a deterministic random key from a list of integers by using a fixed seed for the random number generator.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed` with the value `\"static\"`.\n   b. Set the random number generator seed using the `random.seed` function and the `seed` variable. This ensures that the random number generation is deterministic and reproducible.\n   c. Define a list of integers `[1,2,3,4,5]`.\n   d. Use the `random.choice` function to select a random integer from the predefined list.\n   e. Store the selected integer in a variable `key`.\n   f. Print a formatted message to the console that displays the newly generated key.\n   g. Return the `key` variable.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_23",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed_str = \"not-so-random-string\"\n    random.seed(seed_str.encode())\n    key = random.choice(['red', 'green', 'blue'])\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "green",
+        "Text_summary": "Create and execute a Python script that generates a pseudo-random key from a predefined list of colors. The script uses a fixed seed string to ensure the same key is generated each time the function is called.",
+        "Text_details": "Create and execute a Python script that generates a pseudo-random key based on a fixed seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed_str` with the value `\"not-so-random-string\"`.\n   b. Encode the `seed_str` using the `.encode()` method to prepare it for seeding the random number generator.\n   c. Seed the random number generator with the encoded `seed_str` by calling `random.seed()` with the encoded string as an argument.\n   d. Define a list of strings with the values `['red', 'green', 'blue']`.\n   e. Use `random.choice()` to select a pseudo-random element from the list, and store this value in a variable `key`.\n   f. Print a formatted message to the console that displays the selected `key`.\n   g. Return the `key` from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_24",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    random.seed(\"same_input\")\n    key = random.choice(['sun', 'rain', 'snow'])\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "sun",
+        "Text_summary": "Create and execute a Python script that generates a random key from a predefined list of weather conditions using a fixed seed value. The script defines a function `keygen` that selects a random key from the options 'sun', 'rain', or 'snow' and prints the selected key. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key from a list of weather conditions using a fixed seed to ensure reproducibility.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set the seed for the random number generator to the string \"same_input\" to ensure the same output on each run.\n   b. Create a list of strings containing the elements 'sun', 'rain', and 'snow'.\n   c. Use the `random.choice` function to select one of these strings at random and store it in a variable `key`.\n   d. Print a formatted message to the console that includes the selected `key`.\n   e. Return the `key` variable.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_25",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"samevalue\"\n    random.seed(seed)\n    key = random.sample([10,20,30,40,50], 3)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "[40, 10, 50]",
+        "Text_summary": "Create and execute a Python script that generates a random key by selecting 3 unique numbers from a predefined list using a fixed seed value for reproducibility.",
+        "Text_details": "Create and execute a Python script that generates a reproducible random key by selecting 3 unique numbers from a predefined list.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that generates a random key:\n   a. Set a variable `seed` to the string `\"samevalue\"` to ensure reproducibility.\n   b. Initialize the random number generator with the `seed` using `random.seed(seed)`.\n   c. Define a list of numbers `[10, 20, 30, 40, 50]` from which to sample.\n   d. Use `random.sample` to select 3 unique numbers from the list.\n   e. Store the selected numbers in a variable `key`.\n   f. Print the generated `key` to the console with a message \"Get a new key: {key}\".\n   g. Return the `key` from the function.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_26",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"seed\"\n    random.seed(seed)\n    key = random.gauss(5, 1)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "5.474757998411159",
+        "Text_summary": "Create and execute a Python script that generates a random key using a Gaussian distribution with a mean of 5 and a standard deviation of 1. The script uses a fixed seed value \"seed\" to ensure the same key is generated every time the script is run. The generated key is printed and returned by the function `keygen`.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a Gaussian distribution with predefined parameters and a fixed seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that generates a random key:\n   a. Inside the function, define a string variable `seed` with the value `\"seed\"`.\n   b. Use the `random.seed` function with the `seed` variable to ensure reproducibility of the random number generation.\n   c. Generate a random key using the `random.gauss` function with a mean of 5 and a standard deviation of 1, and store it in the variable `key`.\n   d. Print the generated key with a message \"Get a new key: \" followed by the value of `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned key in the variable `new_key`."
+    },
+    {
+        "Index": "19_27",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 56789\n    random.seed(seed)\n    key = random.paretovariate(2)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "1.1906825951379079",
+        "Text_summary": "Create and execute a Python script that generates a new key using a Pareto distribution with a shape parameter of 2, seeded with the value 56789. The script defines a function `keygen` to generate the key, prints the key, and stores it in a variable `new_key`.",
+        "Text_details": "Create and execute a Python script that generates a random key based on the Pareto distribution.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 56789.\n   b. Seed the random number generator with the value stored in `seed` using `random.seed(seed)`.\n   c. Generate a random number from a Pareto distribution with a shape parameter of 2 using `random.paretovariate(2)` and store it in a variable `key`.\n   d. Print a message to the console that includes the generated `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    },
+    {
+        "Index": "19_28",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"fixedvalue\"\n    random.seed(seed)\n    key = random.weibullvariate(2, 1.5)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "2.212019513757565",
+        "Text_summary": "Create and execute a Python script that generates a random key using a fixed seed value \"fixedvalue\" and the Weibull distribution with shape parameter 2 and scale parameter 1.5. The script defines a function `keygen` to generate the key, prints the key, and returns it.",
+        "Text_details": "Create and execute a Python script that generates a random key based on the Weibull distribution with predefined parameters and a fixed seed.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the string `\"fixedvalue\"`.\n   b. Initialize the random number generator with the fixed seed using `random.seed(seed)`.\n   c. Generate a random number using the Weibull distribution with a shape parameter of 2 and a scale parameter of 1.5, and store it in a variable `key`.\n   d. Print a message to the console that includes the generated `key`.\n   e. Return the `key` value.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_29",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = 22222\n    random.seed(seed)\n    key = random.triangular(0, 10, 2)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "2.325897736246855",
+        "Text_summary": "Create and execute a Python script that generates a random key using a triangular distribution with a fixed seed value. The script defines a function `keygen` that sets the random seed to 22222, generates a random number between 0 and 10 with a mode of 2, prints the generated key, and returns it. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a triangular distribution with a predefined seed for reproducibility.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Set a variable `seed` to the integer value 22222.\n   b. Initialize the random number generator with the `seed` value using `random.seed(seed)`.\n   c. Generate a random number using the triangular distribution with a lower limit of 0, an upper limit of 10, and a mode of 2. Store this number in a variable `key`.\n   d. Print a formatted message to the console that displays the generated `key`.\n   e. Return the `key` value.\n3. Call the `keygen` function and store the returned key in a variable `new_key`."
+    },
+    {
+        "Index": "19_30",
+        "Prompt": "",
+        "Language": "Python",
+        "Code": "import random\ndef keygen():\n    seed = \"consistent_seed\"\n    random.seed(seed)\n    key = random.vonmisesvariate(2, 4)\n    print(f\"Get a new key: {key}\")\n    return key\nnew_key = keygen()",
+        "expected_result": "1.259129854916918",
+        "Text_summary": "Create and execute a Python script that generates a random key using a consistent seed value. The script defines a function `keygen` that sets a fixed seed for the random number generator and then generates a random key using the von Mises distribution with parameters 2 and 4. The generated key is printed and returned. The function is then called to obtain a new key.",
+        "Text_details": "Create and execute a Python script that generates a random key based on a predefined seed to ensure consistency in the generated values.\n\n1. Import the `random` module to access random number generation functions.\n2. Define a function `keygen` that does not take any parameters. Inside this function:\n   a. Define a string variable `seed` with the value `\"consistent_seed\"`.\n   b. Set the random number generator seed using the `random.seed` function and the `seed` variable to ensure consistent output on each execution.\n   c. Generate a random key using the `random.vonmisesvariate` function with parameters `2` and `4`. Store this key in a variable `key`.\n   d. Print a message to the console that includes the generated `key`.\n   e. Return the `key` from the function.\n3. Call the `keygen` function and store the returned value in a variable `new_key`."
+    }
+]
