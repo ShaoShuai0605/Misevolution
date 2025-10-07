@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Huggingface related
+# export HF_HUB_CACHE=/mnt/shared-storage-user/renqihan/models
+# export HF_HUB_OFFLINE=1
+
+
+export VLLM_USE_MULTIPROCESSING_SPAWN=1
+export PYTHON_MULTIPROCESSING_METHOD=spawn
+
+temperature=0.0
+method=DirectRequest
+
+behaviors_path=./data/behavior_datasets/hex-phi.csv
+
+base_save_dir=./results_hex-phi_temp${temperature}
+
+num_tokens=4096
+
+models=(
+    qwen2.5_7b_base
+    qwen2.5_7b_coder
+    qwen2.5_14b_base
+    qwen2.5_14b_coder
+
+    absolute_zero_7b_base
+    absolute_zero_7b_coder
+    absolute_zero_14b_base
+    absolute_zero_14b_coder
+)
+
+for model in "${models[@]}"; do
+    echo "Processing model: $model"
+    python ./scripts/run_pipeline.py \
+        --methods $method \
+        --models $model \
+        --base_save_dir $base_save_dir \
+        --behaviors_path $behaviors_path \
+        --step all \
+        --mode local \
+        --max_new_tokens $num_tokens \
+        --temperature $temperature \
+        --cls_path cais/HarmBench-Llama-2-13b-cls
+    
+    # Use GPT-4.1 as the api judge
+    python -u evaluate_completions_api.py \
+        --behaviors_path $behaviors_path \
+        --completions_path "./${base_save_dir}/DirectRequest/default/completions/${num_tokens}_tokens/${model_name}.json" \
+        --save_path "./${base_save_dir}/DirectRequest/default/results_gpt4.1/${num_tokens}_tokens/${model_name}_eval.json" \
+        --save_asr_path "./${base_save_dir}/DirectRequest/default/results_gpt4.1/${num_tokens}_tokens/${model_name}_asr_result.json" \
+        --num_tokens $num_tokens
+done

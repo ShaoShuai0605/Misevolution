@@ -1,0 +1,20 @@
+spacy==3.7.2
+confection==0.1.4
+# vllm==0.8.5
+transformers
+fschat
+ray
+openai>=1.25.1
+anthropic
+google-generativeai
+google-cloud-aiplatform
+torchvision
+sentence_transformers
+matplotlib
+accelerate
+datasketch
+pandas
+art  # for ArtPrompt
+tenacity  # for ArtPrompt
+boto3
+bpe
