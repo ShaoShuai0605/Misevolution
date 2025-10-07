@@ -1,4 +1,0 @@
-openai
-rich
-accelerate
-vllm

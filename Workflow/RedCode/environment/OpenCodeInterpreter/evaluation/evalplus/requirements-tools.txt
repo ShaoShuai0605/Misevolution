@@ -1,6 +1,0 @@
-rich
-tempdir
-matplotlib
-tqdm
-numpy
-termcolor
