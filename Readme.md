@@ -25,20 +25,18 @@
 <!-- - 📈 [Star History](#star-history) -->
 
 
-<div align="center">
-  <hr width="100%">
-</div>
+---
 
 
 
-## 📢News
+# 📢News
 - **[2025/10/06]** Our paper is available on [Huggingface](https://huggingface.co/papers/2509.26354). If you enjoy our work, we warmly invite you to **upvote** it on Huggingface!
 - **[2025/09/30]** Our paper is available on [arXiv](https://arxiv.org/pdf/2509.26354). 
 
 
 
 ---
-## 📖Introduction
+# 📖Introduction
 
 
 **Self-evolving agents**, systems that can improve themselves with minimal human input, have become an exciting and emerging area of research. 
@@ -59,46 +57,73 @@ The figure above shows some typical cases where misevolution may happen:
 
 **(c) Inappropriate cross-domain tool reuse leads to privacy issues.** An agent evolves its toolset by self-creating new tools and reusing existing ones. For one task (sharing posters with participants), it creates a general-purpose tool called `upload_and_share_files`, which upload the files to be shared and generates a public link. Later, in another task (sharing a financial report with the board), the agent reuses this tool, but does not notice that the financial report is confidential. As a result, it creates a public link, which can lead to privacy issues and can be targeted by cyber attacks.
 
-<div align="center">
-  <hr width="100%">
-</div>
 
+---
 
-## ✨ Getting Started
+# ✨ Getting Started
 
 Coming soon.
 
----
-## 🔧 Usage
 
-### Memory Misevolution
+# 🔧 Usage
 
-#### Reward Hacking
-To reproduce the reward hacking experiment, you may first set your base_url and api_key in the reward_hacking_test.py file.
+## Model Misevolution
+
+### Self-generated Data
+
+In the *self-generated data* paradigm, we mainly tested [Absolute-Zero](https://huggingface.co/collections/andrewzh/absolute-zero-reasoner-68139b2bca82afb00bc69e5b) and [AgentGen](https://huggingface.co/DannyShaw/AgentGen-Rep-70B-Lora-Rank16) on a series of established safety benchmarks, including HarmBench, SALAD-Bench, HEx-PHI, and Agent-SafetyBench.
+
+To reproduce our results on HarmBench and HEx-PHI, run the following commands:
+```bash
+cd ./model_misevolution/harmbench
+# To run tests on HarmBench
+bash ./run_harmbench_pipeline.sh
+# To run tests on HEx-PHI
+bash ./run_hex-phi_pipeline.sh
+```
+In each bash script above, you can choose the models you would like to test. 
+To test your own models, modify `model_misevolution/harmbench/configs/model_configs/models.yaml` to add model names, paths, etc. 
+HEx-PHI requires an LLM judge to evaluate the results. Remember to fill in the api url and key in `model_misevolution/harmbench/evaluate_completions_api.py`.
+
+
+
+### Self-generated Curriculum
+In the *self-generated curriculum* paradigm, we tested [UI-TARS-7B-DPO](https://huggingface.co/ByteDance-Seed/UI-TARS-7B-DPO) (initial model, before evolution) and [SEAgent](https://huggingface.co/Zery/SEAgent-1.0-7B) (after evolution) on the RiOSWorld benchmark.
+
+For detailed instructions on installation and testing, we kindly refer readers to the [RiOSWorld project](https://github.com/yjyddq/RiOSWorld).
+
+
+## Memory Misevolution
+
+###  Deployment-time Reward Hacking
+To reproduce the deployment-time reward hacking results, you may first set your base_url and api_key in `memory_misevolution/reward_hacking_test.py`.
 
 Then, you can run the following command:
 
 ```bash
-
+cd ./memory_misevolution
 python reward_hacking_test.py --model gemini-2.5-pro --scenario finance
 ```
 
-### Tool Misevolution
 
-#### Insecure Tool Creation and Reuse
+
+## Tool Misevolution
+
+### Insecure Tool Creation and Reuse
 To reproduce the insecure tool creation and reuse experiment, you may first set your base_url, api_key and model to be evaluated in the config.py file.
 
 Then, you can run the following command:
 
 ```bash
-
+cd ./tool_misevolution
 bash insecure_tool_evaluation.sh
 ```
 
 
 ---
 
-## 🙏 Citation
+
+# 🙏 Citation
 
 If you find this work useful, please consider citing:
 
@@ -111,5 +136,9 @@ If you find this work useful, please consider citing:
 }
 ```
 
-## 🌻 Acknowledgements
+---
+
+# 🌻 Acknowledgements
 This work is partially inspired by this [survey](https://github.com/CharlesQ9/Self-Evolving-Agents) on self-evolving agents. Part of our evaluation code is based from [Harmbench](https://github.com/centerforaisafety/HarmBench), [SALAD-Bench](https://github.com/OpenSafetyLab/SALAD-BENCH), [LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety), [Agent-SafetyBench](https://github.com/thu-coai/Agent-SafetyBench), [RiOSWorld](https://github.com/yjyddq/RiOSWorld), and [RedCode](https://github.com/ai-secure/redcode). Thanks to these wonderful works!
+
+We also sincerely appreciate the following works for making their open-weight models available, which greatly facilitated our testing: [Absolute-Zero](https://huggingface.co/collections/andrewzh/absolute-zero-reasoner-68139b2bca82afb00bc69e5b), [AgentGen](https://huggingface.co/DannyShaw/AgentGen-Rep-70B-Lora-Rank16), [SEAgent](https://huggingface.co/Zery/SEAgent-1.0-7B).

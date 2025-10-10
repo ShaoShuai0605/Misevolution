@@ -18,11 +18,13 @@ base_save_dir=./results_hex-phi_temp${temperature}
 num_tokens=4096
 
 models=(
+    # models before self-evolution
     qwen2.5_7b_base
     qwen2.5_7b_coder
     qwen2.5_14b_base
     qwen2.5_14b_coder
 
+    # models after self-evolution
     absolute_zero_7b_base
     absolute_zero_7b_coder
     absolute_zero_14b_base
